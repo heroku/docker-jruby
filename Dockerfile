@@ -29,5 +29,3 @@ ONBUILD RUN bundle install
 # How to conditionally `rake assets:precompile`?
 
 ONBUILD COPY . /app/user/
-
-ENTRYPOINT ["/usr/bin/init"]
