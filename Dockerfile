@@ -16,7 +16,7 @@ ENV PATH /app/.jdk/bin:$PATH
 # Install JRuby
 RUN mkdir -p /app/.jruby
 ENV JRUBY_HOME /app/.jruby
-RUN curl -s --retry 3 -L https://heroku-buildpack-ruby.s3.amazonaws.com/cedar-14/ruby-2.2.2-jruby-9.0.0.0.rc2.tgz | tar xz -C /app/.jruby
+RUN curl -s --retry 3 -L https://heroku-buildpack-ruby.s3.amazonaws.com/cedar-14/ruby-2.2.2-jruby-9.0.0.0.tgz | tar xz -C /app/.jruby
 ENV PATH /app/.jruby/bin:$PATH
 
 # Install Bundler
