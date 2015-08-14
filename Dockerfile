@@ -20,7 +20,7 @@ RUN curl -s --retry 3 -L https://heroku-buildpack-ruby.s3.amazonaws.com/cedar-14
 ENV PATH /app/.jruby/bin:$PATH
 
 # Install Bundler
-RUN jruby -S gem install bundler -v 1.9.7
+RUN jruby -S gem install bundler -v 1.9.7 --no-ri --no-rdoc
 
 # Run bundler to cache dependencies
 ONBUILD COPY ["Gemfile", "Gemfile.lock", "*.gemspec", "/app/user/"]
